@@ -1,7 +1,19 @@
 .wrapper {
     display: flex;
+    /*flex-direction: row; 가 기본값으로 적용 됨 row : 가로*/
+    justify-content: space-around;
+    /*justify-content: 수평에 있는 것들을 변경 함 */
+/*    center 말 그대로 가운데 정렬*/
+/*    space-between  box 들 사이에 공간을 줌 */
+/*    space-around  box 들 사이에 공간을 일정 하게 만들어 줌*/
+/*    main axis 는 flex-direction 의 설정에 따라 적용됨. 이걸 수정 하기 위해선 justify-content 를 사용*/
+/*    이에 대응 하는 axis 는 cross axis 로 align-items 을 사용 함  */
+    align-items: center;
+/*    flex 를 선언 한 부분에 높이를 설정 하지 않아서 가운데로 했지만 움직이지 않음.
+       box 들이랑 높이가 같기 때문에 가운데로 정렬 할 기준이 없음*/
+    height: 100vh;
+/*    이제 높이가 있으므로 align-items 의 적용이 됨*/
 }
-/* flex 를 입히고 싶다면 자식들의 한단계 위의 부모에게 flex 를 입히면 된다. */
 .box {
     background: peru;
     width: 200px;
