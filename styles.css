@@ -1,16 +1,10 @@
+.wrapper {
+    display: flex;
+}
+/* flex 를 입히고 싶다면 자식들의 한단계 위의 부모에게 flex 를 입히면 된다. */
 .box {
-    background: blue;
+    background: peru;
     width: 200px;
     height: 200px;
-    margin-bottom: 2px;
-    display: inline-block;
     color: white;
-}
-
-.box:nth-child(2) {
-    margin-left: 10px;
-}
-
-.box:nth-child(3) {
-    margin-left: 50px;
 }
