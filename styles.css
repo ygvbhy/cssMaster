@@ -1,15 +1,29 @@
-.wrapper {
+.father {
     display: flex;
-    flex-direction: column;
-    /* Main Axis */
     justify-content: space-around;
-    /* Cross Axis */
-    align-items: center;
     height: 100vh;
 }
-.box {
+.child {
     background: peru;
     width: 200px;
     height: 200px;
     color: white;
+    font-size: 40px;
+}
+
+.child:nth-child(1) {
+    order: 2;
+}
+
+.child:nth-child(2) {
+    /* Cross Axis 임 */
+    /* 하지만 flex 를 통으로 조작 하는건 아니고 자식들을 설정 할 수 있음 */
+    align-self: center;
+    /* html 에서 순서를 변경 해도 되지만 css 에서 order 을 사용해서 순서 변경이 가능 html 에서 순서를 변경 할 수 없을때 사용 */
+    /* 기본 order 값은 0 */
+    order: 3
+}
+
+.child:nth-child(3) {
+    align-self: flex-end;
 }
